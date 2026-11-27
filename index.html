@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Portfolio</title>
+    <title>Sara Ahmed | Data Analyst Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="progress"></div>
+    <canvas id="points" aria-hidden="true"></canvas>
 
     <nav>
         <a href="#home" class="logo">Sara<span>.</span></a>
@@ -23,9 +25,9 @@
 
         <p class="hello">Hello, I'm</p>
         <h1>Sara Ahmed Mahmoud</h1>
-        <h2>Information Systems Student <span class="tag">Data Analyst Path</span></h2>
+        <h2><span id="typed">Data Analyst Path</span> <span class="tag">Information Systems Student</span></h2>
 
-        <p class="about">I am a fourth-year Information Systems student. I am interested in data analysis, and I have training in Power BI.</p>
+        <p class="about">I am a fourth-year Information Systems student. I am interested in turning data into clear insights, and I have training in Power BI.</p>
 
    <div class="buttons">
     <a href="#projects" class="btn primary">View my work</a>
@@ -37,31 +39,26 @@
             <img src="sara.jpg.jpeg" alt="Sara Ahmed Mahmoud">
             <span class="float f1">Power BI</span>
             <span class="float f2">SQL</span>
-            <span class="float f3">Databases</span>
+            <span class="float f3">Data Analysis</span>
         </div>
     </header>
 
     <section class="info">
-        <div class="code-box">
-            <div class="code-top">
-                <span><b>GET</b> /api/sara</span>
-                <span class="ok">200 OK</span>
-            </div>
-<pre>{
-  <i>"name"</i>: "Sara Ahmed",
-  <i>"role"</i>: "Aspiring Data Analyst",
-  <i>"major"</i>: "Information Systems",
-  <i>"tools"</i>: ["Power BI", "SQL"],
-  <i>"location"</i>: "Cairo, Egypt",
-  <i>"graduation"</i>: 2027,
-  <i>"open_to_work"</i>: true
-}</pre>
+        <div class="dash">
+            <div class="dash-top"><span>My data workflow</span><div class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <ol>
+                <li tabindex="0" role="button" data-info="Start from a clear question, then get the data that answers it."><b>Collect</b><span>Find the right data</span></li>
+                <li tabindex="0" role="button" data-info="Handle missing and repeated values so the results can be trusted."><b>Clean</b><span>Make it trusted</span></li>
+                <li tabindex="0" role="button" data-info="Use SQL to filter, group and compare the data."><b>Analyze</b><span>Query it with SQL</span></li>
+                <li tabindex="0" role="button" data-info="Turn the results into a simple Power BI dashboard."><b>Visualize</b><span>Show it in Power BI</span></li>
+            </ol>
+            <p class="detail" aria-live="polite">Tap a step to see what it means.</p>
         </div>
 
         <div class="stats">
             <div><strong>4th</strong><span>Year student</span></div>
             <div><strong>Power BI</strong><span>Main tool</span></div>
-            <div><strong>2027</strong><span>Graduation</span></div>
+            <div><strong data-count="2027">2027</strong><span>Graduation</span></div>
         </div>
     </section>
 
@@ -99,10 +96,19 @@
 
     <section id="skills">
         <h3>Skills</h3>
-        <ul class="skills">
+        <div class="filters">
+            <button type="button" class="on" data-show="all">All</button>
+            <button type="button" data-show="data">Data</button>
+            <button type="button" data-show="other">Also studied</button>
+        </div>
+        <ul class="skills main">
             <li>Power BI</li>
             <li>SQL</li>
             <li>Databases</li>
+            <li>Data Visualization</li>
+        </ul>
+        <p class="also">Also studied</p>
+        <ul class="skills">
             <li>C#</li>
             <li>C++</li>
             <li>HTML</li>
@@ -113,6 +119,11 @@
 
     <section id="projects">
         <h3>Projects</h3>
+        <div class="card soon">
+            <span class="tag">Coming soon</span>
+            <h4>Power BI Dashboard</h4>
+            <p>My first data analysis project will appear here.</p>
+        </div>
         <div class="card">
             <h4>NotebookLM Lesson: Customer Service Basics</h4>
             <p>An Arabic lesson built with NotebookLM using 3 sources, with documentation.</p>
@@ -125,5 +136,7 @@
 <a href="https://github.com/Sara-Ahmed1102004" class="btn" target="_blank">GitHub</a>
     </section>
 
+    <a href="#home" class="top" aria-label="Back to top">↑</a>
+    <script src="script.js"></script>
 </body>
 </html>
