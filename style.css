@@ -320,3 +320,7 @@ section[id] { scroll-margin-top: 70px; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.card .tag { margin-bottom: 10px; }
+.view { display: inline-block; margin-top: 14px; }
+.card + .card.soon { margin-top: 18px; }
