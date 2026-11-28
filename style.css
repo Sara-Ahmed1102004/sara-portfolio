@@ -324,3 +324,5 @@ section[id] { scroll-margin-top: 70px; }
 .card .tag { margin-bottom: 10px; }
 .view { display: inline-block; margin-top: 14px; }
 .card + .card.soon { margin-top: 18px; }
+
+#projects .card + .card { margin-top: 18px; }
